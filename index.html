@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Daily Shop</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-title">Daily Shop</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Our Daily Shop</h2>
+                <p>Find the best products at unbeatable prices</p>
+                <button onclick="document.location='#products'">Shop
+                    Now</button>
+            </div>
+        </div>
+
+        <div class="promo-banner">
+            Limited Time Offer: Get 20% off on all products! Use code SAVE20 at
+            checkout.
+        </div>
+
+        <div class="videos">
+            <div class="video-container left">
+                <video class="video" width="80%" controls autoplay>
+                    <source src="./img/vd.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container right">
+                <video class="video" width="80%" controls autoplay>
+                    <source src="./img/vd_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <main>
+            <section id="home">
+                <h2>Featured Categories</h2>
+                <div class="features">
+                    <div class="feature">
+                        <img src="./img/BG2.avif" alt="Electronics">
+                        <h3>Electronics</h3>
+                        <p>Shop now to find high-quality electronics that
+                            combine functionality, style, and reliability.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="./img/BG3.jpg" alt="Home and Kitchen">
+                        <h3>Home and Kitchen</h3>
+                        <p>Shop now and elevate your home and kitchen
+                            experience.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="./img/BG4.jpg" alt="Clothing">
+                        <h3>Clothing</h3>
+                        <p>Shop now to find the perfect pieces that express your
+                            unique style.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products">
+                <h2>Products</h2>
+                <div class="product-list" id="product-list">
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="about-section">
+                    <h1 class="about-title">About Us</h1>
+                    <p class="about-content">We are committed to delivering the
+                        best services to our customers. Our team is composed of
+                        highly skilled professionals dedicated to meeting your
+                        needs.</p>
+                    <img src="./img/BG5.jpg" alt="About Image"
+                        class="about-image">
+                    <button class="about-button" onclick="showMoreInfo()">Learn
+                        More</button>
+                    <div class="stats">
+                        <div class="stat">
+                            <h2>1000+</h2>
+                            <p>Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h2>500+</</h2>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h2>10+</h2>
+                            <p>Years</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <div class="cart" id="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-price"></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Daily Shop. All rights reserved.</p>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
